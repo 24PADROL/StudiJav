@@ -1,6 +1,7 @@
 package com.example.demo;
 
-public class Enrollment {
+
+public class Enrollment{
     private Student student;
     private Course course;
 

@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demo;
 
 public class Teacher extends Person{
     private final int teacherID;

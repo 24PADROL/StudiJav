@@ -1,5 +1,6 @@
 package com.example.demo;
 
+
 public class GraduateStudent extends Student {
     
     public GraduateStudent(String name, int studentID, int age){

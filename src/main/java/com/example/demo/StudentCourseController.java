@@ -1,7 +1,11 @@
 package com.example.demo;
-import java.util.List;
 
+import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Enrollment;
@@ -15,7 +19,7 @@ public class StudentCourseController {
         new Student("Jane", 2, 22),
         new Student("Lebron" , 3, 40)
     );
-
+    
     private List<Course> courses = List.of(
         new Course("Math", 101, 3),
         new Course("History", 102, 4)
@@ -33,7 +37,6 @@ public class StudentCourseController {
 
     @PostMapping("/enroll")
     public String enrollStudent(@RequestBody Enrollment enrollment) {
-        //TODO: process POST request
         enrollment.register();
         return "Student enrolled successfully";
     }
